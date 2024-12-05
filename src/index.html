@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kubernetes Manager</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <div class="config-status">
+                <span id="config-path">No config loaded</span>
+            </div>
+            <div id="k8s-tree"></div>
+        </div>
+        <div id="main-content">
+            <div id="resource-list-panel">
+                <div class="panel-header">
+                    <div class="namespace-filter">
+                        <label for="namespace-select">Namespace:</label>
+                        <select id="namespace-select">
+                            <option value="all">All Namespaces</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="resource-list">
+                    <table id="resource-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Namespace</th>
+                                <th>Age</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="resize-handle"></div>
+            <div id="resource-details-panel">
+                <div class="panel-header">
+                    <h2>Resource Details</h2>
+                </div>
+                <div id="resource-details"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        require('./renderer/index.js');
+    </script>
+</body>
+</html>
