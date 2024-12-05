@@ -1,1 +1,1 @@
-# k8s-electorn-manager
+# k8s-electron-manager
